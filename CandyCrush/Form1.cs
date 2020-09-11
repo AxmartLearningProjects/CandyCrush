@@ -12,9 +12,54 @@ namespace CandyCrush
 {
     public partial class Form1 : Form
     {
+
+        private MyButton[,] btnGrid;
+        private Color currColor, originalColor;
+        private int rows, cols;
+
+
         public Form1()
         {
             InitializeComponent();
+            populateGrid();
+        }
+
+        public void populateGrid()
+        {
+
+            int x, y = 0;
+
+            //calculate the number of rows and cols based on the panel and button size
+            cols = panel1.Height / MyButton.Btn_size;
+            rows = panel1.Width / MyButton.Btn_size;
+
+            // new 2D array of buttons
+            btnGrid = new MyButton[rows, cols];
+
+            // create a new button at each row and col location
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < cols; c++)
+                {
+                    btnGrid[r, c] = new MyButton();
+                    btnGrid[r, c].row = r;
+                    btnGrid[r, c].col = c;
+
+                    // assign the same event handler to every button in the panel
+                    btnGrid[r, c].Click += gridbutton_Click;
+
+                    panel1.Controls.Add(btnGrid[r, c]);
+
+                    // change the location of the button to its proper x and y coordinates
+                    btnGrid[r, c].Location = new Point(r * MyButton.Btn_size, c * MyButton.Btn_size);
+                }
+            }
+
+        }
+
+        private void gridbutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Clicked");
         }
     }
 }
