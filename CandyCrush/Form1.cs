@@ -57,9 +57,33 @@ namespace CandyCrush
 
         }
 
+        private void colorbutton_Click(object sender, EventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            currColor = btn.BackColor;
+            pictureBox1.BackColor = btn.BackColor;
+
+        }
+
         private void gridbutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Clicked");
+
+
+            MyButton btn = (MyButton)sender;
+            originalColor = btn.BackColor;
+
+            floodFill(btn.row, btn.col);
+
+
+        }
+
+        private void floodFill(int r, int c)
+        {
+
+            btnGrid[r, c].BackColor = currColor;
+            
+
         }
     }
 }
