@@ -94,7 +94,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Lime;
+            this.button6.BackColor = System.Drawing.Color.Gray;
             this.button6.Location = new System.Drawing.Point(632, 92);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(33, 33);
@@ -103,7 +103,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Aqua;
+            this.button7.BackColor = System.Drawing.Color.Gold;
             this.button7.Location = new System.Drawing.Point(671, 92);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(33, 33);
@@ -112,7 +112,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Pink;
+            this.button8.BackColor = System.Drawing.Color.Fuchsia;
             this.button8.Location = new System.Drawing.Point(710, 92);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(33, 33);
