@@ -14,7 +14,8 @@ namespace CandyCrush
     {
 
         private MyButton[,] btnGrid;
-        private Color currColor, originalColor;
+        private Color currColor = Color.Red;
+        private Color originalColor;
         private int rows, cols;
 
 
@@ -73,7 +74,11 @@ namespace CandyCrush
             MyButton btn = (MyButton)sender;
             originalColor = btn.BackColor;
 
-            floodFill(btn.row, btn.col);
+            if (!originalColor.Equals(currColor))
+            {
+                floodFill(btn.row, btn.col);
+            }
+            
 
 
         }
