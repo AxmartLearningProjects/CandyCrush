@@ -85,9 +85,17 @@ namespace CandyCrush
             }
 
             lbl_clickCounter.Text = (++clickCounter).ToString();
+            if (clickCounter % 5 == 0)
+            {
+                chaneRandomButton();
+            }
 
 
+        }
 
+        private void chaneRandomButton()
+        {
+            btnGrid[MyButton.rnd.Next(rows), MyButton.rnd.Next(cols)].BackColor = MyButton.myColors[MyButton.rnd.Next(MyButton.myColors.Length)];
         }
 
         private bool gameWonCheck()

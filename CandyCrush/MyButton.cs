@@ -14,7 +14,7 @@ namespace CandyCrush
         public static Color[] myColors = { Color.Red, Color.Blue, Color.Yellow, Color.White, Color.Gray, Color.Gold };
 
 
-        static Random rnd = new Random();
+        public static Random rnd = new Random();
 
         public static int Btn_size = 25;
 
@@ -30,6 +30,8 @@ namespace CandyCrush
             this.BackColor = myColors[initColor];
 
         }
+
+ 
 
     }
 }
