@@ -17,6 +17,7 @@ namespace CandyCrush
         private Color currColor = Color.Red;
         private Color originalColor;
         private int rows, cols;
+        private int clickCounter = 0;
 
 
         public Form1()
@@ -78,8 +79,8 @@ namespace CandyCrush
             {
                 floodFill(btn.row, btn.col);
             }
-            
 
+            lbl_clickCounter.Text = (++clickCounter).ToString();
 
         }
 
@@ -88,7 +89,8 @@ namespace CandyCrush
 
             panel1.Controls.Clear();
             populateGrid();
-
+            lbl_clickCounter.Text = "0";
+            clickCounter = 0;
 
         }
 

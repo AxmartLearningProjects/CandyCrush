@@ -39,6 +39,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.btn_reset = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_clickCounter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +133,7 @@
             // 
             // btn_reset
             // 
-            this.btn_reset.Location = new System.Drawing.Point(632, 188);
+            this.btn_reset.Location = new System.Drawing.Point(632, 186);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(90, 33);
             this.btn_reset.TabIndex = 9;
@@ -147,11 +149,31 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(590, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Click Counter : ";
+            // 
+            // lbl_clickCounter
+            // 
+            this.lbl_clickCounter.AutoSize = true;
+            this.lbl_clickCounter.Location = new System.Drawing.Point(675, 232);
+            this.lbl_clickCounter.Name = "lbl_clickCounter";
+            this.lbl_clickCounter.Size = new System.Drawing.Size(13, 13);
+            this.lbl_clickCounter.TabIndex = 12;
+            this.lbl_clickCounter.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_clickCounter);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.button8);
@@ -167,6 +189,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -183,6 +206,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_clickCounter;
     }
 }
 
