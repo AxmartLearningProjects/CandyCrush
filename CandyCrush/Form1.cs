@@ -80,10 +80,26 @@ namespace CandyCrush
 
         private void floodFill(int r, int c)
         {
+            if (isValid(r , c) && btnGrid[r,c].BackColor.Equals(originalColor))
+            {
+                // change the current cell clicked
+                btnGrid[r, c].BackColor = currColor;
 
-            btnGrid[r, c].BackColor = currColor;
+            // apply to the cell to the south (r +1)
+
+                floodFill(r + 1, c);
+            }
             
 
+
         }
+
+
+        private bool isValid(int r, int c)
+        {
+            return r < rows && r >= 0 && c < cols && c >= 0;
+
+        }
+
     }
 }
