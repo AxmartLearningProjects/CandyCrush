@@ -11,7 +11,7 @@ namespace CandyCrush
     class MyButton : Button
     {
 
-        public static Color[] myColors = { Color.Red, Color.Blue, Color.Yellow, Color.Black, Color.White, Color.Gray, Color.Gold, Color.Fuchsia };
+        public static Color[] myColors = { Color.Red, Color.Blue, Color.Yellow, Color.White, Color.Gray, Color.Gold };
 
 
         static Random rnd = new Random();
