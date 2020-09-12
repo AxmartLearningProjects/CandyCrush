@@ -70,7 +70,11 @@ namespace CandyCrush
 
         private void gridbutton_Click(object sender, EventArgs e)
         {
-
+            if (gameWonCheck())
+            {
+                return;
+            }
+            
 
             MyButton btn = (MyButton)sender;
             originalColor = btn.BackColor;
@@ -82,6 +86,27 @@ namespace CandyCrush
 
             lbl_clickCounter.Text = (++clickCounter).ToString();
 
+
+
+        }
+
+        private bool gameWonCheck()
+        {
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < cols; c++)
+                {
+                    if (!btnGrid[r,c].BackColor.Equals(btnGrid[0,0].BackColor))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            MessageBox.Show($"Congratulation you won with {clickCounter} clicks! If you can do better press the Reset button.");
+
+            return true;
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
