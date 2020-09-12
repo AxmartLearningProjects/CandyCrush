@@ -78,6 +78,15 @@ namespace CandyCrush
 
         }
 
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+
+            panel1.Controls.Clear();
+            populateGrid();
+
+
+        }
+
         private void floodFill(int r, int c)
         {
             if (isValid(r , c) && btnGrid[r,c].BackColor.Equals(originalColor))
@@ -85,11 +94,20 @@ namespace CandyCrush
                 // change the current cell clicked
                 btnGrid[r, c].BackColor = currColor;
 
-            // apply to the cell to the south (r +1)
+                // apply to the cell to the east (r +1)
 
-                floodFill(r + 1, c);
+                floodFill(r +1 , c);
+
+                // apply to the cell to the west (r -1)
+                floodFill(r - 1, c);
+
+                // apply to the cell to the south (c +1)
+                floodFill(r , c+1);
+
+                // apply to the cell to the west (c -1)
+                floodFill(r, c - 1);
             }
-            
+
 
 
         }
